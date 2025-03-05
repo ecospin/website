@@ -171,3 +171,37 @@ body {
     padding: 50px 20px;
     
  }
+
+body {
+    background-color: black; /* Fundal negru */
+    color: white; /* Text alb */
+    font-family: Arial, sans-serif;
+}
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Înălțimea aproape cât ecranul */
+}
+
+.iframe-container iframe {
+    width: 90vw; /* Aproape toată lățimea ecranului */
+    max-width: 1200px; /* Evită să fie prea mare pe ecrane late */
+    height: 80vh; /* Înălțimea iframe-ului */
+    border: none;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: #ff6600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #cc5500;
+}
+
