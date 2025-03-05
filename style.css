@@ -1,216 +1,219 @@
 /* General Styles */
+:root {
+    --color-primary: #55296b;     /* Violet deschis pentru elemente de accent */
+    --color-secondary: #1f0833;   /* Violet închis pentru elemente secundare */
+    --color-dark: #140026;        /* Foarte închis pentru fundaluri sau text */
+    --color-text: #ffffff;        /* Text alb pentru contrast */
+    --color-hover: #7a3f9c;       /* Violet mai deschis pentru hover */
+    --color-accent: #e91e63;      /* Culoarea accentului existent (roz) */
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-dark);
+    color: var(--color-text);
     margin: 0;
     padding: 0;
-  }
-  
-  /* Header */
-  header {
-    background-color: #111;
+}
+
+/* Header */
+header {
+    background-color: var(--color-secondary);
     padding: 20px 0;
     text-align: center;
-    border-bottom: 3px solid #e91e63;
-  }
-  
-  nav ul {
+    border-bottom: 3px solid var(--color-primary);
+}
+
+nav ul {
     list-style: none;
     padding: 0;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     display: inline;
     margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: #e91e63;
+}
+
+nav ul li a {
+    color: var(--color-primary);
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #b0107f;
-  }
-  
-  /* Banner Section */
-  .banner {
+}
+
+nav ul li a:hover {
+    color: var(--color-hover);
+}
+
+/* Banner Section */
+.banner {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to right, #5D3FD3, #e714a1);
-    color: #fff;
-  }
-  
-  .banner .btn {
+    background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+    color: var(--color-text);
+}
+
+.banner .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-dark);
+    color: var(--color-text);
     text-decoration: none;
     border-radius: 5px;
     transition: 0.3s;
-  }
-  
-  .banner .btn:hover {
-    background-color: #e91e63;
-  }
-  
-  /* Games Section */
-  #games {
+}
+
+.banner .btn:hover {
+    background-color: var(--color-primary);
+}
+
+/* Games Section */
+#games {
     text-align: center;
     padding: 50px 20px;
-  }
-  
-  .game-cards {
+}
+
+.game-cards {
     display: flex;
     justify-content: center;
     gap: 20px;
-  }
-  
-  .game-card {
-    background-color: #222;
+    flex-wrap: wrap;
+}
+
+.game-card {
+    background-color: var(--color-secondary);
     padding: 20px;
     border-radius: 10px;
     width: 250px;
     transition: transform 0.3s;
-  }
-  
-  .game-card:hover {
+}
+
+.game-card:hover {
     transform: scale(1.05);
-  }
-  
-  .game-card img {
+}
+
+.game-card img {
     width: 100%;
     border-radius: 10px;
-  }
-  
-  /* Promotions Section */
-  #promotions {
+}
+
+/* Promotions Section */
+#promotions {
     text-align: center;
     padding: 50px 20px;
-    background-color: #111;
-  }
+    background-color: var(--color-secondary);
+}
 
-  .promo-container {
+.promo-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px 0;
-  }
-  
-  .promo-card {
-    background-color: #5D3FD3;
+}
+
+.promo-card {
+    background-color: var(--color-primary);
     padding: 20px;
-    margin: 10px auto;
+    margin: 10px;
     width: 300px;
     border-radius: 10px;
-    color: #000;
+    color: var(--color-text);
     transition: transform 0.3s;
-    gap: 0px;
-    align-items: center;
-  }
+}
 
-  .promo-card:hover {
+.promo-card:hover {
     transform: scale(1.05);
-  }
+}
 
-  
-  /* Contact Section */
-  #contact {
+/* Contact Section */
+#contact {
     text-align: center;
     padding: 50px 20px;
-  }
-  
-  form {
-    background-color: #222;
+}
+
+form {
+    background-color: var(--color-secondary);
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
-    justify-content: center;
-  }
-  
-  input, textarea {
+}
+
+input, textarea {
     display: block;
     width: 300px;
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
     border: none;
+    background-color: var(--color-dark);
+    color: var(--color-text);
     text-align: center;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-  }
-  
-  button {
-    background-color: #e91e63;
+}
+
+button {
+    background-color: var(--color-primary);
     padding: 10px 20px;
-    color: #fff;
+    color: var(--color-text);
     border: none;
     cursor: pointer;
     transition: 0.3s;
-  }
-  
-  button:hover {
-    background-color: #b0107f;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000;
-    border-top: 3px solid #e91e63;
-  }
-
- #Ranked {
-    text-align: center;
-    padding: 50px 20px;
-    
- }
-
-body {
-    background-color: black; /* Fundal negru */
-    color: white; /* Text alb */
-    font-family: Arial, sans-serif;
 }
 
+button:hover {
+    background-color: var(--color-hover);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-dark);
+    border-top: 3px solid var(--color-primary);
+}
+
+/* Ranked Section */
+#ranked {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Iframe Container */
 .iframe-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh; /* Înălțimea aproape cât ecranul */
+    height: 90vh;
 }
 
 .iframe-container iframe {
-    width: 90vw; /* Aproape toată lățimea ecranului */
-    max-width: 1200px; /* Evită să fie prea mare pe ecrane late */
-    height: 80vh; /* Înălțimea iframe-ului */
+    width: 90vw;
+    max-width: 1200px;
+    height: 80vh;
     border: none;
 }
 
+/* Buttons */
 .btn {
     text-decoration: none;
-    color: white;
-    background-color: #5D3FD3;
+    color: var(--color-text);
+    background-color: var(--color-primary);
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #e91e63;
+    background-color: var(--color-hover);
 }
 
+/* Game Item Links */
 .game-item a {
-    text-decoration: none; /* Elimină sublinierea implicită a link-urilor */
-    color: inherit;        /* Păstrează culoarea textului */
-    display: block;        /* Asigură că link-ul ocupă întregul spațiu al containerului */
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .game-item a:hover {
-    opacity: 0.8;          /* Efect de transparență la hover */
+    opacity: 0.8;
 }
