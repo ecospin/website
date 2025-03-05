@@ -205,3 +205,12 @@ body {
     background-color: #e91e63;
 }
 
+.game-item a {
+    text-decoration: none; /* Elimină sublinierea implicită a link-urilor */
+    color: inherit;        /* Păstrează culoarea textului */
+    display: block;        /* Asigură că link-ul ocupă întregul spațiu al containerului */
+}
+
+.game-item a:hover {
+    opacity: 0.8;          /* Efect de transparență la hover */
+}
