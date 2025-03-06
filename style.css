@@ -1077,27 +1077,23 @@ nav ul li a:hover {
 }
 
 .recent-games {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .recent-game {
-    background-color: var(--color-secondary);
-    padding: 15px;
-    border-radius: 10px;
+    background: none; /* Elimină fundalul */
+    padding: 0; /* Elimină padding-ul */
+    border: none; /* Elimină chenarul */
     text-align: center;
-    width: 150px;
-    transition: transform 0.3s;
-}
-
-.recent-game:hover {
-    transform: scale(1.05);
 }
 
 .recent-game img {
     width: 100%;
+    height: 150px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -1111,4 +1107,126 @@ nav ul li a:hover {
     font-size: 14px;
     color: var(--color-text);
     margin: 0;
+    background: linear-gradient(90deg, #00ff00, #ffffff, #00ff00);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 3s linear infinite;
+}
+
+@keyframes gradientText {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Stiluri pentru secțiunea Recently Played */
+#recently-played {
+    padding: 20px;
+    text-align: center;
+}
+
+#recently-played h2 {
+    font-size: 24px;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.recent-games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.recent-game {
+    background: none; /* Elimină fundalul */
+    padding: 0; /* Elimină padding-ul */
+    border: none; /* Elimină chenarul */
+    text-align: center;
+}
+
+.recent-game img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.recent-game h3 {
+    font-size: 16px;
+    color: var(--color-text);
+    margin: 10px 0 5px;
+}
+
+.recent-game p {
+    font-size: 14px;
+    color: var(--color-text);
+    margin: 0;
+    background: linear-gradient(90deg, #00ff00, #ffffff, #00ff00);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 3s linear infinite;
+}
+
+@keyframes gradientText {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Stiluri pentru dispozitive mobile */
+@media (max-width: 768px) {
+    #recently-played h2 {
+        font-size: 20px; /* Micșorează dimensiunea titlului */
+    }
+
+    .recent-games {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Redu numărul de coloane */
+        gap: 15px; /* Redu spațiul dintre elemente */
+    }
+
+    .recent-game img {
+        height: 120px; /* Micșorează înălțimea imaginilor */
+    }
+
+    .recent-game h3 {
+        font-size: 14px; /* Micșorează dimensiunea textului */
+    }
+
+    .recent-game p {
+        font-size: 12px; /* Micșorează dimensiunea textului */
+    }
+}
+
+@media (max-width: 480px) {
+    .recent-games {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Redu numărul de coloane */
+        gap: 10px; /* Redu spațiul dintre elemente */
+    }
+
+    .recent-game img {
+        height: 100px; /* Micșorează înălțimea imaginilor */
+    }
+
+    .recent-game h3 {
+        font-size: 12px; /* Micșorează dimensiunea textului */
+    }
+
+    .recent-game p {
+        font-size: 10px; /* Micșorează dimensiunea textului */
+    }
 }
