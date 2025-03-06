@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice - Ecospin Casino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-text">
+                Ecospin
+            </div>
+            <div class="menu-container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html" class="menu-item">
+                                <i class="fas fa-arrow-left"></i>
+                                <span>Back to Home</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Butonul de logout în afara chenarului meniului -->
+            <a href="#" id="logout-btn" class="logout-btn" style="visibility: hidden;">Logout</a>
+        </div>
+    </header>
+
+    <div class="game-container">
+        <h1 class="game-title">Dice</h1>
+        <div class="iframe-container">
+            <iframe src="https://example.com/dice-game" title="Dice Game"></iframe>
+        </div>
+    </div>
+
+    <!-- Secțiunea Recently Played -->
+    <section id="recently-played">
+        <h2>Recently Played</h2>
+        <div class="recent-games">
+            <!-- Jocurile jucate recent vor fi adăugate dinamic prin JavaScript -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
