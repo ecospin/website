@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice - Ecospin Casino</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dice.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-text">
+                Ecospin
+            </div>
+
+            <!-- Butonul pentru meniul hamburger -->
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Containerul pentru meniu -->
+            <div class="menu-container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html" class="menu-item">
+                                <i class="fas fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#games" class="menu-item">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Games</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ranked" class="menu-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Ranked</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#promotions" class="menu-item">
+                                <i class="fas fa-gift"></i>
+                                <span>Promotions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="menu-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li id="user-menu-item">
+                            <a href="login.html" class="menu-item">
+                                <i class="fas fa-user"></i>
+                                <span id="user-name">Login</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Chenar pentru balanță și adăugare bani -->
+            <div id="balance-container" class="balance-container" style="display: none;">
+                <div class="balance">
+                    <span id="balance-amount">0,00</span> USD
+                </div>
+                <button id="add-funds-btn" class="add-funds-btn">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+
+            <!-- Butonul de logout -->
+            <a href="#" id="logout-btn" class="logout-btn" style="visibility: hidden;">Logout</a>
+        </div>
+    </header>
+
+    <div class="dice-game-container">
+        <h1 class="game-title">Dice Game</h1>
+
+        <!-- Balance Display -->
+        <div class="balance-display">
+            <label>Your Balance:</label>
+            <span id="balanceAmount">100.00</span> USD
+        </div>
+
+        <div class="bet-amount">
+            <label for="betAmount">Bet Amount:</label>
+            <input type="number" id="betAmount" value="0.00" min="0">
+        </div>
+
+        <div class="multiplier">
+            <label for="multiplier">Multiplier:</label>
+            <input type="number" id="multiplier" value="2.0000" step="0.0001" min="1" readonly>
+        </div>
+
+        <div class="roll-over">
+            <label for="rollOver">Roll Over:</label>
+            <input type="number" id="rollOver" value="50.50" step="0.01" min="0" max="100">
+        </div>
+
+        <button id="toggleRollOver">Roll Over</button>
+
+        <div class="win-chance">
+            <label>Win Chance:</label>
+            <span id="winChance">49.5000%</span>
+        </div>
+
+        <button id="rollButton">Roll Dice</button>
+
+        <div class="result-bar-container">
+            <div class="result-bar">
+                <div class="win-zone"></div>
+                <div class="roll-indicator" id="rollIndicator"></div>
+            </div>
+        </div>
+
+        <div class="result-display">
+            <p id="resultText">Place your bet and roll the dice!</p>
+        </div>
+    </div>
+
+    <script src="dice.js"></script>
+</body>
+</html>

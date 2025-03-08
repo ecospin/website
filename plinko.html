@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plinko Game - Ecospin Casino</title>
+    <link rel="icon" type="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-text">
+                Ecospin
+            </div>
+            <div class="menu-container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html" class="menu-item">
+                                <i class="fas fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#games" class="menu-item">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Games</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ranked" class="menu-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Ranked</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#promotions" class="menu-item">
+                                <i class="fas fa-gift"></i>
+                                <span>Promotions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="menu-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li id="user-menu-item">
+                            <a href="login.html" class="menu-item">
+                                <i class="fas fa-user"></i>
+                                <span id="user-name">Login</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Butonul de logout în afara chenarului meniului -->
+            <a href="#" id="logout-btn" class="logout-btn" style="visibility: hidden;">Logout</a>
+        </div>
+    </header>
+
+    <div class="plinko-game-container">
+        <div class="plinko-layout">
+            <!-- Partea stângă: Setări -->
+            <div class="plinko-settings">
+                <div class="control-group">
+                    <label for="betAmount">Bet Amount</label>
+                    <input type="number" id="betAmount" value="0.00" min="0">
+                </div>
+                <div class="control-group">
+                    <label for="riskLevel">Risk</label>
+                    <select id="riskLevel">
+                        <option value="low">High</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">Low</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="rows">Rows</label>
+                    <input type="number" id="rows" value="10" min="8" max="14">
+                </div>
+                <button id="dropBallButton">Drop Ball</button>
+                <p id="scoreDisplay">Score: 0</p>
+            </div>
+
+            <!-- Partea dreaptă: Jocul -->
+            <div class="plinko-canvas-container">
+                <canvas id="plinkoCanvas" width="600" height="800"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="plinko.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
