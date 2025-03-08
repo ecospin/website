@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Inter, sans-serif;
     background-color: var(--color-dark);
     color: var(--color-text);
     margin: 0;
@@ -653,7 +653,7 @@ nav ul li a span {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Inter, sans-serif;
     background-color: var(--color-dark);
     color: var(--color-text);
     margin: 0;
@@ -1008,7 +1008,7 @@ nav ul li a:hover {
     border-radius: 15px;
     gap: 10px;
     height: 40px; /* Aceeași înălțime ca chenarul meniului */
-    font-family: Arial, sans-serif; /* Același font ca în chenarul meniului */
+    font-family: Inter, sans-serif; /* Același font ca în chenarul meniului */
 }
 
 .balance {
