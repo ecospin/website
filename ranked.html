@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranked - Ecospin Casino</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ranked.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-text">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    Ecospin
+                </a>
+            </div>
+    
+            <!-- Butonul pentru meniul hamburger -->
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+    
+            <!-- Containerul pentru meniu -->
+            <div class="menu-container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html" class="menu-item">
+                                <i class="fas fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#games" class="menu-item">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Games</span>
+                            </a>
+                        </li>
+                        <li>
+                          <a href="ranked.html" class="menu-item">
+                              <i class="fas fa-trophy"></i>
+                              <span>Ranked</span>
+                          </a>
+                      </li>
+                        <li>
+                            <a href="index.html#promotions" class="menu-item">
+                                <i class="fas fa-gift"></i>
+                                <span>Promotions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#contact" class="menu-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li id="user-menu-item">
+                          <a href="login.html" class="menu-item" id="account-link">
+                              <i class="fas fa-user"></i>
+                              <span id="user-name">Login</span>
+                          </a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+            
+    
+            <div id="balance-container" class="balance-container" style="display: none;">
+              <div class="balance">
+                  <span id="balance-amount">0,00</span> USD
+              </div>
+              <button id="add-funds-btn" class="add-funds-btn">
+                  <i class="fas fa-plus"></i>
+              </button>
+          </div>
+    
+    
+            <a href="#" id="logout-btn" class="logout-btn" style="visibility: hidden;">Logout</a>
+        </div>
+    </header>
+
+    <div class="ranked-container">
+        <h1 class="ranked-title">Your Rank</h1>
+
+        <!-- Rank-ul Curent -->
+        <div class="current-rank">
+            <img src="bronze.png" alt="Bronze Rank" class="rank-icon">
+            <h2>Bronze Bluffer</h2>
+            <p>You are currently in the Bronze rank. Play more to level up!</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 30%;"></div>
+            </div>
+            <p>30% to Silver Spinner</p>
+        </div>
+
+        <!-- Statistici Detaliate -->
+        <div class="stats-section">
+            <h2>Your Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Games Played</h3>
+                    <p id="games-played">50</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Total Wins</h3>
+                    <p id="total-wins">20</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Win Rate</h3>
+                    <p id="win-rate">40%</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-coins"></i>
+                    <h3>Total Wagered</h3>
+                    <p id="total-wagered">$500.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Provocări și Recompense -->
+        <div class="challenges-section">
+            <h2>Daily Challenges</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <h3>Play 5 Games</h3>
+                    <p>Reward: $10 Bonus</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div>
+                    </div>
+                    <p>3/5 Completed</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Win 3 Times</h3>
+                    <p>Reward: 50 XP</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 33%;"></div>
+                    </div>
+                    <p>1/3 Completed</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Wager $100</h3>
+                    <p>Reward: $20 Bonus</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <p>$80/$100 Wagered</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="leaderboard-section">
+            <h2>Global Leaderboard</h2>
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Player1</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Player2</td>
+                        <td>4500</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Player3</td>
+                        <td>4000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Buton de Înapoi -->
+        <div class="back-button">
+            <a href="index.html" class="btn">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="ranked.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
