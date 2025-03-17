@@ -1,0 +1,159 @@
+/* Stiluri pentru jocul Plinko */
+.plinko-game-container {
+    background-color: #1f0833;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.game-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.balance-display {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.plinko-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.plinko-settings {
+    width: 30%;
+    background-color: #140026;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #55296b;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.control-group label {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.control-group input, .control-group select {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1f0833;
+    color: white;
+    width: 100%;
+}
+
+#dropBallButton {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+#dropBallButton:hover {
+    background-color: #c2185b;
+}
+
+#scoreDisplay {
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.plinko-canvas-container {
+    width: 70%;
+    background-color: #140026;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #55296b;
+}
+
+#plinkoCanvas {
+    background-color: #1f0833;
+    border: 2px solid #55296b;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Stiluri pentru sloturi */
+.slot {
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid transparent; /* Adăugăm un chenar transparent */
+}
+
+/* Culori pentru sloturi */
+.slot-22 { background-color: #55296b; border-color: #8a5cb6; }
+.slot-5 { background-color: #1f0833; border-color: #6d3f9c; }
+.slot-2 { background-color: #8a5cb6; border-color: #4b2c6a; }
+.slot-1.4 { background-color: #6d3f9c; border-color: #3a1f4f; }
+.slot-0.6 { background-color: #4b2c6a; border-color: #55296b; }
+.slot-0.4 { background-color: #3a1f4f; border-color: #1f0833; }
+
+/* Stiluri pentru sloturile exterioare */
+.slot-outer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Stiluri pentru sloturile exterioare */
+.slot-outer .slot {
+    width: 60px; /* Lățime mai mare pentru sloturile exterioare */
+    height: 40px; /* Înălțime mai mare pentru sloturile exterioare */
+    margin: 0 5px; /* Spațiu între sloturi */
+}
+
+/* Animații pentru câștig și pierdere */
+@keyframes winAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes loseAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.win {
+    animation: winAnimation 0.5s ease-in-out;
+}
+
+.lose {
+    animation: loseAnimation 0.5s ease-in-out;
+}

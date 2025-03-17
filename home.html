@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecospin Casino</title>
+    <link rel="icon" type="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecospin Casino</title>
+        <link rel="icon" type="icon" href="favicon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+      <header>
+        <div class="header-content">
+            <div class="logo-text">
+                <a href="home.html" style="text-decoration: none; color: inherit;">
+                    Ecospin
+                </a>
+            </div>
+    
+            <!-- Butonul pentru meniul hamburger -->
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+    
+            <!-- Containerul pentru meniu -->
+            <div class="menu-container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="home.html" class="menu-item">
+                                <i class="fas fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="home.html" class="menu-item">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Games</span>
+                            </a>
+                        </li>
+                        <li>
+                          <a href="ranked.html" class="menu-item">
+                              <i class="fas fa-trophy"></i>
+                              <span>Ranked</span>
+                          </a>
+                      </li>
+                        <li>
+                            <a href="home.html#promotions" class="menu-item">
+                                <i class="fas fa-gift"></i>
+                                <span>Promotions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="home.html#contact" class="menu-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li id="user-menu-item">
+                          <a href="account.html" class="menu-item" id="account-link">
+                              <i class="fas fa-user"></i>
+                              <span id="user-name">Login</span>
+                          </a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div id="balance-container" class="balance-container" style="display: none;">
+              <div class="balance">
+                  <span id="balance-amount">0,00</span> USD
+              </div>
+              <button id="add-funds-btn" class="add-funds-btn">
+                  <i class="fas fa-plus"></i>
+              </button>
+          </div>
+    
+            <a href="#" id="logout-btn" class="logout-btn" style="visibility: hidden;">Logout</a>
+        </div>
+    </header>
+
+
+<div id="auth-popup" class="auth-popup">
+  <div class="auth-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="auth-title">Login</h2>
+      <form id="auth-form">
+          <div id="auth-email" style="display: none;">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email">
+          </div>
+          <label for="auth-username">Username:</label>
+          <input type="text" id="auth-username" name="username" required>
+          <label for="auth-password">Password:</label>
+          <input type="password" id="auth-password" name="password" required>
+          <button type="submit" id="auth-submit">Login</button>
+      </form>
+      <p id="auth-switch-text">Don't have an account? <a href="#" id="auth-switch-link">Register here</a>.</p>
+  </div>
+</div>
+
+<div id="deposit-popup" class="deposit-popup">
+  <div class="deposit-content">
+      <span class="close-btn">&times;</span>
+      <h2>Deposit Funds</h2>
+      <div class="deposit-methods">
+          <button class="deposit-method">
+              <i class="fas fa-credit-card"></i>
+              <span>Credit Card</span>
+          </button>
+          <button class="deposit-method">
+              <i class="fas fa-paypal"></i>
+              <span>PayPal</span>
+          </button>
+          <button class="deposit-method">
+              <i class="fas fa-bitcoin"></i>
+              <span>Crypto</span>
+          </button>
+      </div>
+  </div>
+</div>
+
+<section id="home">
+  <div class="banner">
+      <div class="banner-content">
+          <h1>Romania's Largest Casino</h1>
+          <p>Wolrd's first on and offline Casino.</p>
+          <a href="#games" class="btn">Play Now</a>
+          <div class="partners">
+              <span>Official sponsors of:</span>
+              <div class="partner-logos">
+                  <div class="logo-scroll">
+                      <img src="f1-logo.png" alt="Formula 1 Team">
+                      <img src="real.png" alt="Football Club">
+                      <img src="gsw.png" alt="Basketball Team">
+                      <img src="navi.png" alt="Tennis Association">
+                      <img src="ufc.png" alt="Esports Team">
+                      <img src="f1-logo.png" alt="Formula 1 Team">
+                      <img src="real.png" alt="Football Club">
+                      <img src="gsw.png" alt="Basketball Team">
+                      <img src="navi.png" alt="Tennis Association">
+                      <img src="ufc.png" alt="Esports Team">
+                      <img src="f1-logo.png" alt="Formula 1 Team">
+                      <img src="real.png" alt="Football Club">
+                      <img src="gsw.png" alt="Basketball Team">
+                      <img src="navi.png" alt="Tennis Association">
+                      <img src="ufc.png" alt="Esports Team">
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+  
+<section id="games">
+  <h2>Our Games</h2>
+  <div class="game-filters">
+    <button class="filter-btn active" data-filter="all">
+        <i class="fas fa-th"></i>
+        <span>All</span>
+    </button>
+    <button class="filter-btn" data-filter="originals">
+        <i class="fas fa-dice"></i>
+        <span>Originals</span>
+    </button>
+    <button class="filter-btn" data-filter="slots">
+        <i class="fas fa-coins"></i>
+        <span>Slots</span>
+    </button>
+    <button class="filter-btn" data-filter="live">
+        <i class="fas fa-tv"></i>
+        <span>Live Casino</span>
+    </button>
+</div>
+  <div class="game-cards">
+
+
+  </div>
+</section>
+  
+<section id="ranked">
+  <h2 style="text-align: center;">Join The Ranks!</h2>
+  <div class="game-cards">
+      <div class="game-card">
+          <img src="bronze.png" alt="Bronze">
+          <h3>Bronze Bluffer</h3>
+      </div>
+      <div class="game-card">
+          <img src="silver.png" alt="Silver">
+          <h3>Silver Spinner</h3>
+      </div>
+      <div class="game-card">
+          <img src="gold.png" alt="Gold">
+          <h3>Golden Grinder</h3>
+      </div>
+      <div class="game-card">
+          <img src="diamond.png" alt="Diamond">
+          <h3>Diamond Dealer</h3>
+      </div>
+      <div class="game-card">
+          <img src="gm.png" alt="GM">
+          <h3>Grand Gambler</h3>
+      </div>
+  </div>
+  <!-- Butonul "Join Now" -->
+  <div style="text-align: center; margin-top: 20px;">
+      <a href="ranked.html" class="btn">Join Now</a>
+  </div>
+</section>
+
+<section id="promotions">
+  <h2>Exclusive Promotions</h2>
+  <div class="promo-container">
+      <!-- Filtre în partea stângă -->
+      <div class="promo-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="welcome">Welcome Bonuses</button>
+          <button class="filter-btn" data-filter="free-spins">Free Spins</button>
+          <button class="filter-btn" data-filter="cashback">Cashback</button>
+      </div>
+
+      <!-- Carduri de promoții centrate -->
+      <div class="promo-cards">
+          <div class="promo-card" data-category="welcome">
+              <img src="welcome-bonus.jpg" alt="Welcome Bonus">
+              <div class="promo-content">
+                  <h3>Welcome Bonus</h3>
+                  <p>Get a 100% match on your first deposit, up to $500!</p>
+                  <button class="claim-btn">Claim Now</button>
+              </div>
+          </div>
+          <div class="promo-card" data-category="free-spins">
+              <img src="free-spins.png" alt="Free Spins">
+              <div class="promo-content">
+                  <h3>50 Free Spins</h3>
+                  <p>Enjoy 50 free spins on your first slot game.</p>
+                  <button class="claim-btn">Claim Now</button>
+              </div>
+          </div>
+          <div class="promo-card" data-category="cashback">
+              <img src="cashback.png" alt="Cashback">
+              <div class="promo-content">
+                  <h3>10% Cashback</h3>
+                  <p>Get 10% cashback on all losses every Friday.</p>
+                  <button class="claim-btn">Claim Now</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section id="blog">
+  <h2>Latest News</h2>
+  <div class="blog-posts">
+      <div class="blog-post">
+          <img src="news1.jpg" alt="News 1">
+          <h3>New Game Released: Sugar Rush</h3>
+          <p>Check out our latest slot game with amazing bonuses!</p>
+          <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="blog-post">
+          <img src="news2.jpg" alt="News 2">
+          <h3>Weekly Cashback Promo</h3>
+          <p>Get 10% cashback on all your losses every Friday!</p>
+          <a href="#" class="btn">Read More</a>
+      </div>
+  </div>
+</section>
+
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <h3>How do I create an account?</h3>
+            <p>Click on the "Login" button and then select "Register" to create a new account.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How do I deposit funds?</h3>
+            <p>Go to your account and click on "Add Funds" to choose a payment method.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Are the games fair?</h3>
+            <p>Yes, all our games are provably fair and use certified random number generators.</p>
+        </div>
+    </div>
+</section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need assistance, feel free to contact us.</p>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+        <!-- Link-uri Utile -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="ranked.html">Ranked</a></li>
+                <li><a href="#promotions">Promotions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Informații de Contact -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><i class="fas fa-envelope"></i> ecospindpm@gmail.com</li>
+                <li><i class="fas fa-phone"></i> +40 720 954 172</li>
+                <li><i class="fas fa-map-marker-alt"></i> Str. Octavian Goga nr.11, Alba Iulia, Alba</li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Drepturi de Autor -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Ecospin Casino. All Rights Reserved.</p>
+    </div>
+</footer>
+
+  <script src="script.js"></script>
+
+  <div id="loading-screen">
+    <div class="loading-content">
+        <img src="logo.png" alt="Ecospin Logo" class="loading-logo">
+        <div class="loading-spinner"></div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,479 @@
+/* Stiluri generale */
+:root {
+    --color-primary: #55296b; /* Violet deschis */
+    --color-secondary: #1f0833; /* Violet închis */
+    --color-dark: #140026; /* Fundal închis */
+    --color-text: #ffffff; /* Text alb */
+    --color-hover: #7a3f9c; /* Violet deschis pentru hover */
+    --color-box-bg: rgba(255, 255, 255, 0.1); /* Fundal semi-transparent */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--color-secondary);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-text a {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.logo-text a:hover {
+    color: var(--color-hover);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-hover);
+}
+
+/* Butonul "Go to Casino" în header */
+.cta-button {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-hover));
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+    animation: pulse 2s infinite, shine 3s infinite;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.6);
+}
+
+.cta-button i {
+    font-size: 18px;
+}
+
+/* Animații */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: -200%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+/* Secțiunea Hero */
+#hero {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary)),
+                url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 20px;
+    text-align: center;
+    color: var(--color-text);
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#hero .btn {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#hero .btn:hover {
+    background-color: var(--color-hover);
+    transform: translateY(-3px);
+}
+
+/* Secțiuni */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--color-primary);
+    text-align: center;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-primary);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Stiluri pentru chenare */
+.content-box {
+    background-color: var(--color-box-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Servicii */
+#services .content-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+.service p {
+    font-size: 16px;
+    color: var(--color-text);
+}
+
+/* Testimoniale */
+#testimonials .content-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+    font-style: italic;
+    color: var(--color-text);
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+/* Blog */
+#blog .content-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.blog-post {
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+.blog-post p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--color-text);
+}
+
+.blog-post .btn {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.blog-post .btn:hover {
+    background-color: var(--color-hover);
+}
+
+/* Secțiunea Contact */
+#contact .content-box {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact .form-group {
+    margin-bottom: 20px;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: var(--color-dark);
+    color: var(--color-text);
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+#contact textarea {
+    height: 150px;
+}
+
+#contact button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#contact button:hover {
+    background-color: var(--color-hover);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-secondary);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: var(--color-text);
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--color-hover);
+}
+
+footer a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--color-hover);
+}
+
+/* Secțiunea Hero */
+#hero {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary)),
+                url('images/hero-bg.jpg'); /* Adaugă o imagine de fundal */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: var(--color-text);
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay pentru a face textul mai lizibil */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#hero h1 {
+    font-size: 36px; /* Titlu mai mic */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero p {
+    font-size: 18px; /* Text mai mic */
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#hero .btn {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#hero .btn:hover {
+    background-color: var(--color-hover);
+    transform: translateY(-3px);
+}   
